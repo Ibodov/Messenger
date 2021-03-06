@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    //Вызвать onSendMessage() при щелчке на кнопке
+    //Вызвать onSendMessage() при щелчке на кнопке.
     public void onSendMessage(View view) {
         Intent intent = new Intent(this, ReceiveMessageActivity.class);
         startActivity(intent);
