@@ -2,4 +2,5 @@
     <string name="app_name">Messenger</string>
     <string name="send_message">SEND MESSAGE</string>
     <string name="message_text" />
+    <string name="chooser">Send message</string>
 </resources>

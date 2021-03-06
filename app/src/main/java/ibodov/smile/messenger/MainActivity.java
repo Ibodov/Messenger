@@ -25,11 +25,24 @@ public class MainActivity extends AppCompatActivity {
         messageView = findViewById(R.id.message);
         //получаем в новую перем. инфор(текст)
         String messageText = messageView.getText().toString();
+       /*
         //созд. намер и указываем новый активити
         Intent intent = new Intent(this, ReceiveMessageActivity.class);
         //выводим инфу с messageText
         intent.putExtra(ReceiveMessageActivity.EXTRA_MESSAGE, messageText);
+        */
         //Запускаем Интент
-        startActivity(intent);
+
+
+        //созд. интент с указанием отправки
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        //указываем тип
+        intent.setType("text/plan");
+        intent.putExtra(Intent.EXTRA_TEXT, messageText);
+        Intent chosenIntent;
+        String chooserTitle;
+        chooserTitle = getString(R.string.chooser);
+        chosenIntent = Intent.createChooser(intent, chooserTitle);
+        startActivity(chosenIntent);
     }
 }
